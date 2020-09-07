@@ -1,0 +1,44 @@
+<div>
+    <h2>The Blog</h2>
+    <div id="articles">
+    </div>
+</div>
+
+<script>
+    function select(target) {
+        return document.querySelector(target);
+    }
+
+    function selectAll(target) {
+        return document.querySelector(target);
+    }
+
+    const displayArticles = async () => {
+        const res = await fetch('/articles');
+        const articles = await res.json();
+
+        console.log("displayArticles articles", articles);
+
+        const container = select('#articles');
+
+        articles.forEach(article => {
+            /* IMAGE */
+            const image = document.createElement('img');
+            image.setAttribute('src', article.thumbnail.url);
+
+            container.appendChild(image);
+
+            /* TITLE */
+            const title = document.createElement('h2');
+            title.innerText = article.title;
+            container.appendChild(title);
+
+            /* CONTENT */
+            const content = document.createElement('div');
+            content.innerText = article.content;
+            container.appendChild(content);
+        })
+    }
+
+    displayArticles();
+</script>

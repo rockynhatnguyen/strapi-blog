@@ -1,3 +1,3 @@
-# Strapi application
+# Strapi Blog
 
-A quick description of your strapi application
+A simple Blog website using Strapi Headless CMS.

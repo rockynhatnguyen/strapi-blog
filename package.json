@@ -1,5 +1,5 @@
 {
-  "name": "blog-app",
+  "name": "strapi-blog",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -24,7 +24,7 @@
     "sqlite3": "latest"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Rocky Nguyen"
   },
   "strapi": {
     "uuid": "9b6da74b-a57a-4287-acd5-6e8423fded94"
